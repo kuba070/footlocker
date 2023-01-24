@@ -1,15 +1,24 @@
 import { Button, TextField } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { useProducts } from "../contexts/ProductsContextProvider";
 
-const AddProduct = () => {
-  const { addProduct } = useProducts();
+const EditProduct = () => {
+  const { getProductDetails, editedProduct, productDetails } = useProducts();
 
-  const [product, setProduct] = useState({
-    image: "",
-    description: "",
-    price: 0,
-  });
+  const { id } = useParams();
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    getProductDetails(id);
+  }, []);
+
+  useEffect(() => {
+    setProduct(productDetails);
+  }, [productDetails]);
+
+  const [product, setProduct] = useState(productDetails);
 
   function handleValues(e) {
     if (e.target.value === "price") {
@@ -26,6 +35,7 @@ const AddProduct = () => {
       setProduct(obj);
     }
   }
+
   return (
     <div
       style={{
@@ -39,7 +49,7 @@ const AddProduct = () => {
           margin: "auto",
         }}
       >
-        ADMIN PANEL
+        EDIT PANEL
       </h1>
       <br />
       <TextField
@@ -52,6 +62,7 @@ const AddProduct = () => {
         label="Image"
         variant="outlined"
         name="image"
+        value={product.image || ""}
       />
       <br />
       <TextField
@@ -64,6 +75,7 @@ const AddProduct = () => {
         label="Description"
         variant="outlined"
         name="description"
+        value={product.description || ""}
       />
       <br />
       <TextField
@@ -76,20 +88,21 @@ const AddProduct = () => {
         label="Price"
         variant="outlined"
         name="price"
+        value={product.price || ""}
       />
       <br />
       <Button
         onClick={() => {
-          addProduct(product);
-          setProduct({ image: "", description: "", price: 0 });
+          editedProduct(id, product);
+          navigate("/products");
         }}
         style={{ margin: "auto", width: "50%" }}
         variant="outlined"
       >
-        Create Product
+        Save Product
       </Button>
     </div>
   );
 };
 
-export default AddProduct;
+export default EditProduct;

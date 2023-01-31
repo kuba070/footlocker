@@ -26,7 +26,7 @@ const SearchBar = () => {
 
   return (
     <Grid item md={3}>
-      <Paper elevation={5}>
+      <Paper elevation={6}>
         <TextField
           value={search}
           onChange={(e) => setSearch(e.target.value)}

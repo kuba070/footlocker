@@ -12,16 +12,19 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import { Grid, TextField } from "@mui/material";
+import { useProducts } from "../contexts/ProductsContextProvider";
 
 const pages = [
-  { name: "Products", link: "/products", id: 1 },
-  { name: "Services", link: "/services", id: 2 },
-  { name: "About", link: "/about", id: 3 },
-  { name: "Contact", link: "/contact", id: 4 },
-  { name: "Admin", link: "/admin", id: 5 },
+  { name: "Home", link: "/", id: 1 },
+  { name: "Products", link: "/products", id: 2 },
+  { name: "Services", link: "/services", id: 3 },
+  { name: "About", link: "/about", id: 4 },
+  { name: "Contact", link: "/contact", id: 5 },
+  { name: "Admin", link: "/admin", id: 6 },
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Home", "Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -135,6 +138,8 @@ function Navbar() {
               </Link>
             ))}
           </Box>
+
+          {/* cart */}
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

@@ -2,15 +2,27 @@
   "products": [
     {
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/dad73e3e-0759-4c4d-8d75-7a50d87e5459/vaporfly-2-mens-road-racing-shoes-glWqfm.png",
-      "description": "qwertyuipopj.l",
+      "description": "nike",
       "price": "123",
-      "id": 4
+      "id": 6
     },
     {
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/dad73e3e-0759-4c4d-8d75-7a50d87e5459/vaporfly-2-mens-road-racing-shoes-glWqfm.png",
-      "description": "qwerty",
-      "price": "344",
-      "id": 5
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/514c0c6c-8c60-4d65-94c4-73158a3028be/invincible-3-mens-road-running-shoes-CLdFjq.png",
+      "description": "nike invincible 3",
+      "price": "180",
+      "id": 7
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/44c21f0a-4290-40aa-be0e-546148ae7979/air-jordan-1-hi-flyease-mens-shoes-VjGcGX.png",
+      "description": "Jordan 1",
+      "price": "150",
+      "id": 8
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b4bbffd7-1fe1-4a92-970e-49e1a3a54ac4/air-jordan-6-retro-shoes-vXk3FV.png",
+      "description": "Air Jordan 6 Retro",
+      "price": "123",
+      "id": 9
     }
   ]
 }

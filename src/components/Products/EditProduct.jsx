@@ -72,6 +72,19 @@ const EditProduct = () => {
           margin: "auto",
         }}
         id="outlined-basic"
+        label="Name"
+        variant="outlined"
+        name="name"
+        value={product.image || ""}
+      />
+      <br />
+      <TextField
+        onChange={handleValues}
+        style={{
+          width: "50%",
+          margin: "auto",
+        }}
+        id="outlined-basic"
         label="Description"
         variant="outlined"
         name="description"

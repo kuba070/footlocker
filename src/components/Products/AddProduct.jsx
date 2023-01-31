@@ -7,6 +7,7 @@ const AddProduct = () => {
 
   const [product, setProduct] = useState({
     image: "",
+    name: "",
     description: "",
     price: 0,
   });
@@ -52,6 +53,19 @@ const AddProduct = () => {
         label="Image"
         variant="outlined"
         name="image"
+      />
+      <br />
+
+      <TextField
+        onChange={handleValues}
+        style={{
+          width: "50%",
+          margin: "auto",
+        }}
+        id="outlined-basic"
+        label="Name"
+        variant="outlined"
+        name="name"
       />
       <br />
       <TextField

@@ -15,7 +15,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { Grid, TextField } from "@mui/material";
 import { useProducts } from "../contexts/ProductsContextProvider";
 
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Badge } from "@mui/material";
 import { useCart } from "../contexts/CartContextProvider";
@@ -62,12 +62,16 @@ function Navbar() {
 
   return (
     <AppBar position="static">
+
       <Container
         style={{
           backgroundColor: "black",
         }}
         maxWidth="xl"
       >
+
+      <Container style={{ backgroundColor: "black" }} maxWidth="xl">
+
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography

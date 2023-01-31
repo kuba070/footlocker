@@ -75,7 +75,7 @@ const EditProduct = () => {
         label="Name"
         variant="outlined"
         name="name"
-        value={product.image || ""}
+        value={product.name || ""}
       />
       <br />
       <TextField

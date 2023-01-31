@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useProducts } from "../contexts/ProductsContextProvider";
+import { useProducts } from "../../contexts/ProductsContextProvider";
 
 const ProductCard = ({ item }) => {
   const { deleteProduct } = useProducts();
@@ -17,11 +17,11 @@ const ProductCard = ({ item }) => {
   return (
     <>
       {" "}
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 320, marginRight: "4rem" }}>
         <CardMedia
           component="img"
           alt="green iguana"
-          height="140"
+          height="400"
           image={item.image}
         />
         <CardContent>

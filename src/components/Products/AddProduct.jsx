@@ -1,6 +1,6 @@
 import { Button, TextField } from "@mui/material";
 import React, { useState } from "react";
-import { useProducts } from "../contexts/ProductsContextProvider";
+import { useProducts } from "../../contexts/ProductsContextProvider";
 
 const AddProduct = () => {
   const { addProduct } = useProducts();

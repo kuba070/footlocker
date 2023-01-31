@@ -5,6 +5,7 @@ import ProductPage from "../pages/ProductPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import ServicesPage from "../pages/ServicesPage";
 import EditProductPage from "../pages/EditProductPage";
+import CartPage from "../pages/CartPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -29,11 +30,16 @@ const MainRoutes = () => {
       id: 4,
     },
 
-    // {
-    //   link: "*",
-    //   element: <NotFoundPage />,
-    //   id: 3,
-    // },
+    {
+      link: "*",
+      element: <NotFoundPage />,
+      id: 5,
+    },
+    {
+      link: "/cart",
+      element: <CartPage />,
+      id: 5,
+    },
   ];
   return (
     <>

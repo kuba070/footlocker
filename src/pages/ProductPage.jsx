@@ -1,5 +1,5 @@
 import React from "react";
-import ProductList from "../Products/ProductList";
+import ProductList from "../components/Products/ProductList";
 
 const ProductPage = () => {
   return (

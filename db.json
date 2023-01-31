@@ -1,10 +1,22 @@
 {
   "products": [
     {
-      "image": "123",
-      "description": "123",
-      "price": "123",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0ca943b5-2488-4aa4-b980-cd4179ae2d3f/lunar-force-1-mens-duckboot-tTZklH.png",
+      "description": "kubakuba",
+      "price": "12312312312",
       "id": 1
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0ca943b5-2488-4aa4-b980-cd4179ae2d3f/lunar-force-1-mens-duckboot-tTZklH.png",
+      "description": "wwww",
+      "price": "222",
+      "id": 3
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0ca943b5-2488-4aa4-b980-cd4179ae2d3f/lunar-force-1-mens-duckboot-tTZklH.png",
+      "description": "33",
+      "price": "444$",
+      "id": 4
     }
   ]
 }

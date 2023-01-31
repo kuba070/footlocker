@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
+import { TextField } from "@mui/material";
 
 const pages = [
   { name: "Products", link: "/products", id: 1 },
@@ -43,7 +44,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar style={{ backgroundColor: "yellowgreen" }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -95,9 +96,15 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                  <Link to={page.link}>
-                    <Typography textAlign="center">{page.name}</Typography>
+                <MenuItem
+                  style={{ color: "black" }}
+                  key={page.id}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Link to={page.link} style={{ color: "black" }}>
+                    <Typography sx={{ color: "black" }} textAlign="center">
+                      {page.name}
+                    </Typography>
                   </Link>
                 </MenuItem>
               ))}
@@ -122,9 +129,25 @@ function Navbar() {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              justifyContent: "space-evenly",
+              color: "black",
+            }}
+          >
             {pages.map((page) => (
-              <Link to={page.link} key={page.id}>
+              <Link
+                to={page.link}
+                key={page.id}
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  textDecoration: "none",
+                  color: "black",
+                }}
+              >
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}

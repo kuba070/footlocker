@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { createContext, useContext, useReducer, useState } from "react";
-import { act } from "react-dom/test-utils";
+import React, { createContext, useContext, useReducer } from "react";
+import { ACTIONS } from "../helpers/consts";
 
 export const productsContext = createContext();
 export const useProducts = () => useContext(productsContext);
@@ -14,10 +14,10 @@ const INIT_STATE = {
 
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
-    case "GET_PRODUCTS":
+    case ACTIONS.GET_PRODUCTS:
       return { ...state, products: action.payload };
 
-    case "GET_PRODUCTS_DETAILS":
+    case ACTIONS.GET_PRODUCTS_DETAILS:
       return { ...state, productDetails: action.payload };
 
     default:

@@ -16,6 +16,12 @@ import { Link, useSearchParams } from "react-router-dom";
 import { Grid, TextField } from "@mui/material";
 import { useProducts } from "../contexts/ProductsContextProvider";
 
+import { Link, useNavigate } from "react-router-dom";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Badge } from "@mui/material";
+import { useCart } from "../contexts/CartContextProvider";
+import { getCountProductsInCart } from "../helpers/functions";
+
 const pages = [
   { name: "Home", link: "/", id: 1 },
   { name: "Products", link: "/products", id: 2 },
@@ -27,6 +33,16 @@ const pages = [
 const settings = ["Home", "Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
+  const { addProductToCart } = useCart();
+
+  const navigate = useNavigate();
+
+  const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    setCount(getCountProductsInCart);
+  }, [addProductToCart]);
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -139,7 +155,14 @@ function Navbar() {
             ))}
           </Box>
 
-          {/* cart */}
+
+          <Link to="/cart">
+            <Button>
+              <Badge color="error" badgeContent={count}>
+                <ShoppingCartIcon sx={{ color: "white" }} />
+              </Badge>
+            </Button>
+          </Link>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

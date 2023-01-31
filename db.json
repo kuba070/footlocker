@@ -23,7 +23,82 @@
       "description": "Air Jordan 6 Retro",
       "price": "123",
       "id": 9
-
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/cuvuokzz86meuxcssbma/air-max-97-mens-shoes-LJmK45.png",
+      "name": "Nike",
+      "description": "Air Max 97",
+      "price": "175",
+      "id": 11
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5bf8e7f4-18c7-4826-9bab-7b9532a5e3b6/air-jordan-1-mid-mens-shoes-b3js2D.png",
+      "name": "Nike",
+      "description": "Air Jordan Mid",
+      "price": "125",
+      "id": 12
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6ec1a5e8-af15-4b45-8540-b51a5e8b26d1/air-jordan-1-low-g-golf-shoes-jChrQ3.png",
+      "name": "Nike",
+      "description": "Air Jordan 1 Low G",
+      "price": "140",
+      "id": 13
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e25add2e-77d1-4554-b3ce-283d7c48f5a1/blazer-mid-pro-club-mens-shoes-Vgslvc.png",
+      "name": "Nike",
+      "description": "Blazer Mid Pro club",
+      "price": "115",
+      "id": 14
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f46649b7-ab7d-4d9a-851e-7122a971448c/kd15-basketball-shoes-10P3rj.png",
+      "name": "Nike",
+      "description": "KD15",
+      "price": "130",
+      "id": 15
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a52e5eb5-17a1-48c5-9ee1-08b048d8d69c/air-max-270-mens-shoes-KkLcGR.png",
+      "name": "Nike",
+      "description": "Air Max 270",
+      "price": "137",
+      "id": 16
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3954af94-ef0e-4277-a3a2-2df84eba652a/free-metcon-4-training-shoes-KX41Bv.png",
+      "name": "Nike",
+      "description": "Free Metcon 4",
+      "price": "120",
+      "id": 17
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6d438819-e8ff-4de5-aa4d-6565756171da/pegasus-turbo-next-nature-mens-road-running-shoes-pnz45r.png",
+      "name": "Nike",
+      "description": "Pegasus Turbo Next Nature",
+      "price": "150",
+      "id": 18
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e68a11ae-3300-4619-8695-4aca7514a08d/victori-one-mens-slides-vrTGLL.png",
+      "name": "Nike",
+      "description": "Victory One ",
+      "price": "35",
+      "id": 19
+    },
+    {
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8733687c-f56b-482f-96e0-832830a8bd9c/react-infinity-3-mens-road-running-shoes-1bRq75.png",
+      "name": "Nike",
+      "description": "React Infinity 3",
+      "price": "160",
+      "id": 20
+    },
+    {
+      "image": "",
+      "description": "",
+      "price": 0,
+      "id": 21
     }
   ]
 }

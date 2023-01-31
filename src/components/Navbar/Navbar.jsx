@@ -12,7 +12,6 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { Link, useSearchParams } from "react-router-dom";
 import { Grid, TextField } from "@mui/material";
 import { useProducts } from "../contexts/ProductsContextProvider";
 
@@ -63,9 +62,14 @@ function Navbar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container
+        style={{
+          backgroundColor: "black",
+        }}
+        maxWidth="xl"
+      >
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -75,13 +79,14 @@ function Navbar() {
               mr: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
-              fontWeight: 700,
+              fontWeight: 500,
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              fontSize: "50px",
             }}
           >
-            LOGO
+            FL
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -147,14 +152,19 @@ function Navbar() {
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{
+                    my: 2,
+                    color: "white",
+                    display: "block",
+                    fontSize: "16px",
+                    fontWeight: "400",
+                  }}
                 >
                   {page.name}
                 </Button>
               </Link>
             ))}
           </Box>
-
 
           <Link to="/cart">
             <Button>
@@ -167,7 +177,10 @@ function Navbar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar
+                  alt="Remy Sharp"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtdN7JU5_2s_kjrpsQ_tue99qiUBaEAP-j4g&usqp=CAU"
+                />
               </IconButton>
             </Tooltip>
             <Menu

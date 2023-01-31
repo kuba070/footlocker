@@ -12,6 +12,10 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { Link, useSearchParams } from "react-router-dom";
+import { Grid, TextField } from "@mui/material";
+import { useProducts } from "../contexts/ProductsContextProvider";
+
 import { Link, useNavigate } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Badge } from "@mui/material";
@@ -19,13 +23,14 @@ import { useCart } from "../contexts/CartContextProvider";
 import { getCountProductsInCart } from "../helpers/functions";
 
 const pages = [
-  { name: "Products", link: "/products", id: 1 },
-  { name: "Services", link: "/services", id: 2 },
-  { name: "About", link: "/about", id: 3 },
-  { name: "Contact", link: "/contact", id: 4 },
-  { name: "Admin", link: "/admin", id: 5 },
+  { name: "Home", link: "/", id: 1 },
+  { name: "Products", link: "/products", id: 2 },
+  { name: "Services", link: "/services", id: 3 },
+  { name: "About", link: "/about", id: 4 },
+  { name: "Contact", link: "/contact", id: 5 },
+  { name: "Admin", link: "/admin", id: 6 },
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Home", "Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
   const { addProductToCart } = useCart();
@@ -149,6 +154,7 @@ function Navbar() {
               </Link>
             ))}
           </Box>
+
 
           <Link to="/cart">
             <Button>

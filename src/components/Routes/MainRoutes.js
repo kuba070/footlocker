@@ -5,29 +5,36 @@ import ProductPage from "../pages/ProductPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import ServicesPage from "../pages/ServicesPage";
 import EditProductPage from "../pages/EditProductPage";
+import HomePage from "../pages/HomePage";
+
 import CartPage from "../pages/CartPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
     {
+      link: "/",
+      element: <HomePage />,
+      id: 1,
+    },
+    {
       link: "/products",
       element: <ProductPage />,
-      id: 1,
+      id: 2,
     },
     {
       link: "/services",
       element: <ServicesPage />,
-      id: 2,
+      id: 3,
     },
     {
       link: "/admin",
       element: <AdminPage />,
-      id: 3,
+      id: 4,
     },
     {
       link: "/edit/:id",
       element: <EditProductPage />,
-      id: 4,
+      id: 5,
     },
 
     {

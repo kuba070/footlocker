@@ -16,7 +16,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { Grid, TextField } from "@mui/material";
 import { useProducts } from "../contexts/ProductsContextProvider";
 
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Badge } from "@mui/material";
 import { useCart } from "../contexts/CartContextProvider";
@@ -63,7 +63,7 @@ function Navbar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container style={{ backgroundColor: "black" }} maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
@@ -154,7 +154,6 @@ function Navbar() {
               </Link>
             ))}
           </Box>
-
 
           <Link to="/cart">
             <Button>
